@@ -1,5 +1,2 @@
-a = int(input())
-if a==5:
-    print('yes')
-else:
-    print('no')
+a,b,c = map(int,input().split())
+print(a,b,c)
