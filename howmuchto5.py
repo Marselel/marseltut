@@ -4,6 +4,7 @@ q = m
 s = 0
 if m >= 4.5:
     print('ваш балл на 5 =', m)
+    print('Its good')
 else:
     while q < 4.5:
         a.append(5)
