@@ -34,3 +34,5 @@ elif fs>ls and fs ==10:
 elif fs<ls and ls !=10 or fs>ls and ls !=10:
     a = smalltobig(a)
     a = bigtosmall(a)
+print(a)
+# код написан Истяковым Марселем
