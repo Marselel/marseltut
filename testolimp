@@ -1,0 +1,7 @@
+n=int(input())
+k=n//5
+jump=[3,4,5]
+need=n%5
+if need<3:
+    k+1
+print(k)
