@@ -1,0 +1,25 @@
+class Solution(object):
+    def trap(self, height):
+        count=0
+        for i in range(len(height)):
+            for j in range(i+2,len(height)):
+                count+=cTrap(height[i+1:j],height[i],height[j])
+        return count
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+def cTrap(massiv,left,right):
+    if len(massiv)<3:
+        for i in massiv:
+            if i>=left or i>=right:
+                return 0
+        return 1
+    else:
+        lf,rt=massiv[0],massiv[-1]
+        return cTrap(massiv[lf-1:rt],lf,rt)
+    
+def main():
+    print(Solution().trap([5,2,3,2,5]))
+if __name__=="__main__":
+    main()
