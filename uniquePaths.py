@@ -6,7 +6,7 @@ def uniquePaths(nums:list[int])->int:
             if i==0 and j==0:
                 continue
             if nums[i][j]==1:
-                nums[i][j]==0
+                nums[i][j]=0
                 continue
             else:
                 if i==0:
@@ -15,9 +15,4 @@ def uniquePaths(nums:list[int])->int:
                     nums[i][j]=nums[i-1][j]
                 else:
                     nums[i][j]=nums[i-1][j]+nums[i][j-1]
-    return nums
-
-
-
-
-print(uniquePaths([[0,0,0], [0,1,0], [0,0,0]]))
+    return nums[-1][-1]
